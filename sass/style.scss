@@ -112,7 +112,7 @@ $border-sm: 1px solid $color-secondary-lighter;
 #header {
     position: relative;
     height: 22%;
-    padding: .75rem 1.5rem .75rem 0rem !important;
+    padding: .75rem 0rem !important;
     border: $border-sm;
     @include broder-top();
     background-color: $color-secondary;
@@ -139,6 +139,7 @@ $border-sm: 1px solid $color-secondary-lighter;
         max-height: 100%;
         width: 100%;
         margin-left: auto !important;
+        padding-right: 1.25rem !important;
         #aboutme-qus {
             margin-right: auto !important;
             white-space: nowrap;
@@ -201,67 +202,70 @@ $border-sm: 1px solid $color-secondary-lighter;
 #content {
     height: 79%;
     background-color: $color-primary;
-    padding: .75rem 1.25rem .75rem 0rem;
+    padding: .75rem 0rem;
     border-bottom: $border-sm;
     @include border-x();
     @include broder-bottom();
 
-    #section {
-        width: 100%;
-        #topic {
-            @include left-content(25%);
-            & p{
-                @include text-md();
-                text-align: right;
-                text-overflow: ellipsis;
+    #sections{
+        padding-right: 1.25rem;
+        #section {
+            width: 100%;
+            #topic {
+                @include left-content(26%);
+                & p{
+                    @include text-md();
+                    text-align: right;
+                    text-overflow: ellipsis;
+                }
+                #shortnote {
+                    font-size: 7px;
+                    font-weight: 400;
+                }
             }
-            #shortnote {
-                font-size: 7px;
-                font-weight: 400;
+
+            #divider-verticle-sm {
+            width: .1rem;
+            background-color: $color-secondary-lighter;
+            border-radius: .75rem;
             }
-        }
+            
+            #topic-contents, #topic-contents-last {
+                    padding-bottom: .75rem;
+                #topic-content {
+                    padding-bottom: .25rem;
 
-        #divider-verticle-sm {
-        width: .1rem;
-        background-color: $color-secondary-lighter;
-        border-radius: .75rem;
-        }
-         
-        #topic-contents, #topic-contents-last {
-                padding-bottom: .75rem;
-            #topic-content {
-                padding-bottom: .25rem;
+                    &:last-child {
+                    padding-bottom: 0rem !important;
+                    }
+                }
+                #title {
+                    margin: 0;
+                    padding: 0;
+                    @include text-sm();
+                }
+                #status {
+                    margin-left: .5rem !important;
+                    @include skill-title($color-accent-green);
+                }   
+                #information {
+                    margin: 0;
+                    padding: 0;
+                    @include text-sm-muted();
 
-                &:last-child {
+                    & a {
+                        @include label($color-accent-purple);
+                    }
+                }
+                #shortnote {
+                    font-size: 7px;
+                    font-weight: 400;
+                }
+            }
+
+            #topic-contents-last {
                 padding-bottom: 0rem !important;
-                }
             }
-            #title {
-                margin: 0;
-                padding: 0;
-                @include text-sm();
-            }
-            #status {
-                margin-left: .5rem !important;
-                @include skill-title($color-accent-green);
-            }   
-            #information {
-                margin: 0;
-                padding: 0;
-                @include text-sm-muted();
-
-                & a {
-                    @include label($color-accent-purple);
-                }
-            }
-            #shortnote {
-                font-size: 7px;
-                font-weight: 400;
-            }
-        }
-
-        #topic-contents-last {
-            padding-bottom: 0rem !important;
         }
     }
 }

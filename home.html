@@ -24,7 +24,7 @@
             <div id="paper" class="col-4">
 
                 <!-- Header part of the resume -->
-                <div id="header" class="m-0 p-0 pr-5 d-flex overflow-auto">
+                <div id="header" class="m-0 p-0 pr-5 d-flex">
 
                     <!-- Logo -->
                     <div id="logo" class="mr-auto d-flex justify-content-center align-items-center">
@@ -35,7 +35,7 @@
                     <div id="divider-verticle-md" class="m-0 p-0"></div>
 
                     <!-- Biography -->
-                    <div id="biography" class="m-0 p-0 my-auto">
+                    <div id="biography" class="m-0 p-0 my-auto  overflow-auto">
                         <div id="bio" class="m-0 p-0 mr-auto my-auto d-flex align-content-around flex-wrap">
                             <div id="aboutme-q&a" class="m-0 p-0 d-flex">
 
@@ -93,194 +93,196 @@
                 </div>
 
                 <!-- Content part of the resume -->
-                <div id="content" class="overflow-auto">
+                <div id="content" class="d-flex">
 
-                    <!-- Experience Section -->
-                    <div id="section" class="d-flex border-0">
-                        <!-- Title -->
-                        <div id="topic" class="m-0 p-0 pr-3">
-                            <p class="overflow-auto">Experience</p>
-                        </div>
-                        <!-- Vertical line -->
-                        <div id="divider-verticle-sm" class="m-0 p-0"></div>
-                        <!-- All the Work experience -->
-                        <div id="topic-contents" class="pl-3">
-                            <div id="topic-content">
-                                <div class="d-flex">
-                                    <p id="title">Product Support Representative</p>
-                                    <p id="status">Current</p>
-                                </div>
-                                <p id="information">AUTODESK, Bangalore: Since June 2020</p>
-                            </div>
-                            <div id="topic-content">
-                                <p id="title">Associate Retail Planner</p>
-                                <p id="information">TESCO, Bangalore: 1 Year (April 2019 till May 2020)
-                                </p>
-                            </div>
-                            <div id="topic-content">
-                                <p id="title">Junior Architect</p>
-                                <p id="information">RNDSS Projects, Bangalore: 2 Years (March 2017 till February
-                                    2019)
-                                </p>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <!-- Education Section -->
-                    <div id="section" class="d-flex border-0">
-                        <!-- Title -->
-                        <div id="topic" class="m-0 p-0 pr-3">
-                            <p class="overflow-auto">Education</p>
-                        </div>
-                        <!-- Vertical line -->
-                        <div id="divider-verticle-sm" class="m-0 p-0"></div>
-                        <div id="topic-contents" class="pl-3">
-                            <div id="topic-content">
-                                <p id="title">Bharath University | B-Arch</p>
-                                <p id="information">Bharath Architecture Department - 2012 – 2017 | Registration
-                                    No: U12AR017
-                                    <br> Chennai, Tamilnadu, India. – www.bharathuniv.ac.in
-                                </p>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <!-- Certifications -->
-                    <div id="section" class="d-flex border-0">
-                        <!-- Title -->
-                        <div id="topic" class="m-0 p-0 pr-3">
-                            <p class="overflow-auto">Certifications</p>
-                        </div>
-                        <!-- Vertical line -->
-                        <div id="divider-verticle-sm" class="m-0 p-0"></div>
-                        <div id="topic-contents" class="pl-3">
-                            <div id="topic-content">
-                                <p id="title">Professional in Building Design</p>
-                                <p id="information">CADD Center Training Service, Selaiyur, Chennai
-                                    <br>September 2015 | Student ID No: A140214654
-                                </p>
-                            </div>
-                            <div id="topic-content">
-                                <p id="title">IBM Full Stack Software Developer Professional Certificate</p>
-                                <p id="information"><a
-                                        href="https://www.coursera.org/professional-certificates/ibm-full-stack-cloud-developer"
-                                        alt="Course Link">Coursera Course</a> - Status(Ongoing)
-                                </p>
-                            </div>
-                            <div id="topic-content">
-                                <p id="title">IBM Data Science Professional Certificate</p>
-                                <p id="information"><a
-                                        href="https://www.coursera.org/professional-certificates/ibm-data-science"
-                                        alt="Course Link">Coursera Course</a> - Status(Ongoing)
-                                </p>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <!-- Hobbies -->
-                    <div id="section" class="d-flex border-0">
-                        <!-- Title -->
-                        <div id="topic" class="m-0 p-0 pr-3">
-                            <p class="overflow-auto m-0 p-0">Hobbies</p>
-
-                        </div>
-                        <!-- Vertical line -->
-                        <div id="divider-verticle-sm" class="m-0 p-0"></div>
-                        <div id="topic-contents-last" class="pl-3">
-                            <div id="topic-content">
-                                <p id="information">Badminton | Drawing | Travelling | Coding | 3D Modeling</p>
-                                <p id="shortnote" class="m-0 p-0 ml-auto">What I do when I do not
-                                    want
-                                    to do anything.</p>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <!-- Divider -->
-                    <div id="divider-horizontal"></div>
-
-                    <!-- Footer part of the resume -->
-                    <div id="footer" class="overflow-auto">
-                        <!-- Education Section -->
-
+                    <div id="sections" class="overflow-auto">
+                        <!-- Experience Section -->
                         <div id="section" class="d-flex border-0">
                             <!-- Title -->
                             <div id="topic" class="m-0 p-0 pr-3">
-                                <p class="overflow-auto m-0 p-0">Skills</p>
-                                <p id="shortnote" class="m-0 p-0 ml-auto">Things I can't unlearn.</p>
-                                <!-- Language -->
-                                <div id="skill-language">
-                                    <p class="overflow-auto m-0 p-0 pt-1">Language</p>
-                                    <div id="languages" class="m-0 p-0">
-                                        <p id="language">Tamil</p>
-                                        <p id="language">English</p>
-                                        <p id="language">Kannada</p>
+                                <p class="overflow-auto">Experience</p>
+                            </div>
+                            <!-- Vertical line -->
+                            <div id="divider-verticle-sm" class="m-0 p-0"></div>
+                            <!-- All the Work experience -->
+                            <div id="topic-contents" class="pl-3">
+                                <div id="topic-content">
+                                    <div class="d-flex">
+                                        <p id="title">Product Support Representative</p>
+                                        <p id="status">Current</p>
                                     </div>
+                                    <p id="information">AUTODESK, Bangalore: Since June 2020</p>
                                 </div>
+                                <div id="topic-content">
+                                    <p id="title">Associate Retail Planner</p>
+                                    <p id="information">TESCO, Bangalore: 1 Year (April 2019 till May 2020)
+                                    </p>
+                                </div>
+                                <div id="topic-content">
+                                    <p id="title">Junior Architect</p>
+                                    <p id="information">RNDSS Projects, Bangalore: 2 Years (March 2017 till February
+                                        2019)
+                                    </p>
+                                </div>
+                            </div>
 
+                        </div>
+
+                        <!-- Education Section -->
+                        <div id="section" class="d-flex border-0">
+                            <!-- Title -->
+                            <div id="topic" class="m-0 p-0 pr-3">
+                                <p class="overflow-auto">Education</p>
                             </div>
                             <!-- Vertical line -->
                             <div id="divider-verticle-sm" class="m-0 p-0"></div>
                             <div id="topic-contents" class="pl-3">
-                                <!-- Programing -->
-                                <div id="skill-content">
-                                    <div id="skills-01" class="m-0 p-0 d-flex align-items-center">
-                                        <p id="title" class="mr-2">Programing</p>
-                                        <p id="skill-title">Python</p>
-                                        <p id="skill-title">HTML</p>
+                                <div id="topic-content">
+                                    <p id="title">Bharath University | B-Arch</p>
+                                    <p id="information">Bharath Architecture Department - 2012 – 2017 | Registration
+                                        No: U12AR017
+                                        <br> Chennai, Tamilnadu, India. – www.bharathuniv.ac.in
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- Certifications -->
+                        <div id="section" class="d-flex border-0">
+                            <!-- Title -->
+                            <div id="topic" class="m-0 p-0 pr-3">
+                                <p class="overflow-auto">Certifications</p>
+                            </div>
+                            <!-- Vertical line -->
+                            <div id="divider-verticle-sm" class="m-0 p-0"></div>
+                            <div id="topic-contents" class="pl-3">
+                                <div id="topic-content">
+                                    <p id="title">Professional in Building Design</p>
+                                    <p id="information">CADD Center Training Service, Selaiyur, Chennai
+                                        <br>September 2015 | Student ID No: A140214654
+                                    </p>
+                                </div>
+                                <div id="topic-content">
+                                    <p id="title">IBM Full Stack Software Developer Professional Certificate</p>
+                                    <p id="information"><a
+                                            href="https://www.coursera.org/professional-certificates/ibm-full-stack-cloud-developer"
+                                            alt="Course Link">Coursera Course</a> - Status(Ongoing)
+                                    </p>
+                                </div>
+                                <div id="topic-content">
+                                    <p id="title">IBM Data Science Professional Certificate</p>
+                                    <p id="information"><a
+                                            href="https://www.coursera.org/professional-certificates/ibm-data-science"
+                                            alt="Course Link">Coursera Course</a> - Status(Ongoing)
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- Hobbies -->
+                        <div id="section" class="d-flex border-0">
+                            <!-- Title -->
+                            <div id="topic" class="m-0 p-0 pr-3">
+                                <p class="overflow-auto m-0 p-0">Hobbies</p>
+
+                            </div>
+                            <!-- Vertical line -->
+                            <div id="divider-verticle-sm" class="m-0 p-0"></div>
+                            <div id="topic-contents-last" class="pl-3">
+                                <div id="topic-content">
+                                    <p id="information">Badminton | Drawing | Travelling | Coding | 3D Modeling</p>
+                                    <p id="shortnote" class="m-0 p-0 ml-auto">What I do when I do not
+                                        want
+                                        to do anything.</p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- Divider -->
+                        <div id="divider-horizontal"></div>
+
+                        <!-- Footer part of the resume -->
+                        <div id="footer" class="overflow-auto">
+                            <!-- Education Section -->
+
+                            <div id="section" class="d-flex border-0">
+                                <!-- Title -->
+                                <div id="topic" class="m-0 p-0 pr-3">
+                                    <p class="overflow-auto m-0 p-0">Skills</p>
+                                    <p id="shortnote" class="m-0 p-0 ml-auto">Things I can't unlearn.</p>
+                                    <!-- Language -->
+                                    <div id="skill-language">
+                                        <p class="overflow-auto m-0 p-0 pt-1">Language</p>
+                                        <div id="languages" class="m-0 p-0">
+                                            <p id="language">Tamil</p>
+                                            <p id="language">English</p>
+                                            <p id="language">Kannada</p>
+                                        </div>
                                     </div>
 
-                                    <div id="skills-01" class="m-0 p-0 d-flex">
-                                        <p id="skill">API</p>
-                                        <p id="skill">SQLAlchemy</p>
-                                        <p id="skill">Selenium</p>
-                                        <p id="skill">CSS/SCSS</p>
-                                        <p id="skill">Git & GitHub</p>
-                                        <p id="skill">CSS/SCSS</p>
-                                        <p id="skill">Flask</p>
-                                        <p id="skill">Bootstrap</p>
-                                        <p id="skill">Bootstrap</p>
-                                    </div>
                                 </div>
-                                <!-- Architecture -->
-                                <div id="skill-content">
-                                    <div id="skills-02" class="m-0 p-0 d-flex align-items-center">
-                                        <p id="title" class="mr-2">Architecture</p>
-                                        <p id="skill-title">2D</p>
-                                        <p id="skill-title">3D</p>
-                                        <p id="skill-title">Extras</p>
+                                <!-- Vertical line -->
+                                <div id="divider-verticle-sm" class="m-0 p-0"></div>
+                                <div id="topic-contents" class="pl-3">
+                                    <!-- Programing -->
+                                    <div id="skill-content">
+                                        <div id="skills-01" class="m-0 p-0 d-flex align-items-center">
+                                            <p id="title" class="mr-2">Programing</p>
+                                            <p id="skill-title">Python</p>
+                                            <p id="skill-title">HTML</p>
+                                        </div>
+
+                                        <div id="skills-01" class="m-0 p-0 d-flex">
+                                            <p id="skill">API</p>
+                                            <p id="skill">SQLAlchemy</p>
+                                            <p id="skill">Selenium</p>
+                                            <p id="skill">CSS/SCSS</p>
+                                            <p id="skill">Git & GitHub</p>
+                                            <p id="skill">CSS/SCSS</p>
+                                            <p id="skill">Flask</p>
+                                            <p id="skill">Bootstrap</p>
+                                            <p id="skill">Bootstrap</p>
+                                        </div>
+                                    </div>
+                                    <!-- Architecture -->
+                                    <div id="skill-content">
+                                        <div id="skills-02" class="m-0 p-0 d-flex align-items-center">
+                                            <p id="title" class="mr-2">Architecture</p>
+                                            <p id="skill-title">2D</p>
+                                            <p id="skill-title">3D</p>
+                                            <p id="skill-title">Extras</p>
+                                        </div>
+
+                                        <div id="skills-02" class="m-0 p-0 d-flex pulse-sm">
+                                            <p id="skill">AutoCAD</p>
+                                            <p id="skill">Revit</p>
+                                            <p id="skill">BIM360</p>
+                                            <p id="skill">Blender</p>
+                                            <p id="skill">ArchiCAD</p>
+                                            <p id="skill">Illustrator</p>
+                                            <p id="skill">Lumion</p>
+                                            <p id="skill">SketchUp</p>
+                                        </div>
+                                    </div>
+                                    <!-- Soft Skills -->
+                                    <div id="skill-content">
+                                        <div id="skills-03" class="m-0 p-0 d-flex align-items-start">
+                                            <p id="title" class="mr-2">Goot at</p>
+                                            <p id="skill">Teamwork</p>
+                                            <p id="skill">Flexibility</p>
+                                            <p id="skill">Initiative</p>
+                                            <p id="skill">Quick learning</p>
+                                            <p id="skill">Time Keeping</p>
+                                            <p id="skill">Communication</p>
+                                            <p id="skill">Collaboration</p>
+                                            <p id="skill">Problem Solving</p>
+                                        </div>
                                     </div>
 
-                                    <div id="skills-02" class="m-0 p-0 d-flex pulse-sm">
-                                        <p id="skill">AutoCAD</p>
-                                        <p id="skill">Revit</p>
-                                        <p id="skill">BIM360</p>
-                                        <p id="skill">Blender</p>
-                                        <p id="skill">ArchiCAD</p>
-                                        <p id="skill">Illustrator</p>
-                                        <p id="skill">Lumion</p>
-                                        <p id="skill">SketchUp</p>
-                                    </div>
                                 </div>
-                                <!-- Soft Skills -->
-                                <div id="skill-content">
-                                    <div id="skills-03" class="m-0 p-0 d-flex align-items-start">
-                                        <p id="title" class="mr-2">Goot at</p>
-                                        <p id="skill">Teamwork</p>
-                                        <p id="skill">Flexibility</p>
-                                        <p id="skill">Initiative</p>
-                                        <p id="skill">Quick learning</p>
-                                        <p id="skill">Time Keeping</p>
-                                        <p id="skill">Communication</p>
-                                        <p id="skill">Collaboration</p>
-                                        <p id="skill">Problem Solving</p>
-                                    </div>
-                                </div>
-
                             </div>
                         </div>
                     </div>
