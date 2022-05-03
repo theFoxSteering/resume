@@ -1,0 +1,101 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+--color-base: #FAFAFA;
+--color-primary: #FFF;
+--color-primary-light: #F5F5F5;
+--color-primary-dark: #6C757D;
+
+--text-primary: #212529;
+--text-secondary: #6C757D6C;
+--text-secondary-light: #6C757D;
+--text-secondary-dark: #6c757db3;
+
+}
+
+#background {
+  background-color: #212529;
+}
+
+#canvas {
+  height: 100vh;
+  width: 100vh;
+}
+
+#paper {
+  height: 90%;
+  background-color: var(--color-base);
+}
+
+#header {
+  height: 22%;
+  padding: 3% 3% 3% 0% !important;
+  background-color: var(--color-primary-light);
+}
+
+#logo{
+  height: 100%;
+  min-width: 25%;
+  margin: 0 !important;
+  padding: 0 !important;
+  border-right: .1rem solid var(--color-primary-dark);
+}
+
+#logo img {
+  max-width: 75%;
+  max-height: 75%;
+  display: block;
+}
+
+#aboutme-qus ul li {
+  list-style-type: none;
+  font-size: x-small;
+  font-weight:bold;
+  white-space: nowrap;
+  color: var(--text-primary);
+}
+#aboutme-ans ul li {
+  list-style-type: none;
+  font-size: x-small;
+  font-weight:600;
+  color: var(--text-secondary-dark);
+}
+#contacts ul li {
+  list-style-type: none;
+  font-size: xx-small;
+  text-align: right;
+  color: var(--text-secondary-dark);
+}
+#contacts ul li a{
+  text-decoration: none;
+  white-space: normal;
+  color: var(--text-secondary-dark);
+}
+#contacts-icon ul li {
+  list-style-type: none;
+  font-size: xx-small;
+  text-align: right;
+  color: var(--text-secondary-dark);
+}
+#contacts-icon ul li a{
+  text-decoration: none;
+  white-space: normal;
+  color: var(--text-secondary-dark);
+}
+#aboutme ul li {
+  list-style-type: none;
+  font-size: x-small;
+  font-weight:bold;
+  white-space: nowrap;
+  color: var(--text-primary);
+}
+#aboutme ul li:last-child{
+  text-decoration: none;
+  white-space: normal;
+  font-weight: 500;
+  font-size: xx-small;
+  color: var(--text-secondary-dark);
+}
