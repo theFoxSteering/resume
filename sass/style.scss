@@ -26,22 +26,27 @@ $text-secondary-dark: #6c757dc2;
 
 $border-sm: 1px solid $color-secondary-lighter;
 
-@mixin text-sm {
+@mixin text-sm-bold {
     list-style-type: none;
     font-size: x-small;
-    font-weight: bold;
+    font-weight: 700;
     color: $text-primary;
 }
 @mixin text-md {
     list-style-type: none;
     font-size: small;
-    font-weight: bold;
+    font-weight: 700;
     color: $text-primary;
 }
-@mixin text-sm-muted {
+@mixin text-xsm {
     list-style-type: none;
     font-size: xx-small;
-    font-weight: 600;
+    font-weight: 400;
+    color: $text-secondary-dark;
+}
+@mixin text-xsm-light {
+    list-style-type: none;
+    font-size: xx-small;
     color: $text-secondary-dark;
 }
 
@@ -65,8 +70,8 @@ $border-sm: 1px solid $color-secondary-lighter;
     margin-right: .25rem !important;
     margin: 0;
     cursor: pointer;
-    @include text-sm-muted();
-    @include label($col)    
+    @include text-xsm();
+    @include label($col);  
 }
 
 @mixin skill($col) {
@@ -75,7 +80,7 @@ $border-sm: 1px solid $color-secondary-lighter;
     margin: 0;
     white-space: nowrap;
     cursor: pointer;
-    @include text-sm-muted();
+    @include text-xsm-light();
     @include label($col);    
 }
 
@@ -96,8 +101,15 @@ $border-sm: 1px solid $color-secondary-lighter;
   height: 100vh;
   width: 100vw;
   background-color: $color-base;
+  #button {
+    z-index: 999;
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+    transform: translate(0, -50%);
+  }
   #paper {
-    height: 90%;
+    height: 90vh;
     background-color: $color-primary;
     box-shadow: 3px 6px 8px -3px rgba(0,0,0,0.3);
     @include broder-bottom();
@@ -143,54 +155,71 @@ $border-sm: 1px solid $color-secondary-lighter;
         #aboutme-qus {
             margin-right: auto !important;
             white-space: nowrap;
-            @include text-sm();
+            @include text-sm-bold();
         }
 
         #aboutme-ans {
             padding-left: .5rem;
-            @include text-sm-muted();
+            @include text-xsm();
         }
         #aboutme-ans-address {
             white-space: nowrap;
             padding-left: 2rem;
-            @include text-sm-muted();
+            @include text-xsm();
         }
         #contact-details {
             right: 2rem;
             top: 1rem;
             margin-left: auto;
             #contacts {
-            display: inline-block;
-            ul li {
-                white-space: nowrap;
-                @include text-sm-muted();
+                display: inline-block;
+                ul li {
+                    white-space: nowrap;
+                    @include text-xsm();
+                }
+                & a {
+                    text-decoration: none;
+                    @include text-xsm()
+                }
             }
-            & a {
-                text-decoration: none;
-                @include text-sm-muted()
-            }
-        }
 
-        #contacts-icon {
-            ul li{
-                @include text-sm-muted();
-            &:last-child {
-                color: $color-accent-red;
-            }
-            &:first-child {
-                color: $color-accent-yellow;
-            }
-            }
+            #contacts-icon {
+                ul li{
+                    @include text-xsm();
+                &:last-child {
+                    color: $color-accent-red;
+                }
+                &:first-child {
+                    color: $color-accent-yellow;
+                }
+                }
             
-        }
+            }
+
+            #social-icons {
+                text-align: right;
+                font-size: small;
+
+                #icons{
+                    margin-left: .25rem;
+                    text-decoration: none;
+                }
+                
+                .linkedin {
+                    color: #0A66C2;
+                }
+                .git {
+                    color: #171515 ;
+                }
+            }
         }        
 
         #aboutme {
             ul li {
-                @include text-sm();
+                @include text-sm-bold();
 
                 &:last-child {
-                    @include text-sm-muted();
+                    @include text-xsm();
                 }
             }
             
@@ -213,10 +242,13 @@ $border-sm: 1px solid $color-secondary-lighter;
             width: 100%;
             #topic {
                 @include left-content(26%);
+                
                 & p{
                     @include text-md();
                     text-align: right;
                     text-overflow: ellipsis;
+                    padding: 0 !important;
+                    margin: 0 !important;
                 }
                 #shortnote {
                     font-size: 7px;
@@ -225,7 +257,7 @@ $border-sm: 1px solid $color-secondary-lighter;
             }
 
             #divider-verticle-sm {
-            width: .1rem;
+            width: .15rem;
             background-color: $color-secondary-lighter;
             border-radius: .75rem;
             }
@@ -242,21 +274,62 @@ $border-sm: 1px solid $color-secondary-lighter;
                 #title {
                     margin: 0;
                     padding: 0;
-                    @include text-sm();
+                    @include text-sm-bold();
+                    span {
+                        margin: 0;
+                        padding: 0;
+                        @include text-xsm();
+                    }
+                }
+                #title-label {
+                    padding: 0;
+                    margin: 0;
+                    @include text-xsm();
+                    span {
+                        margin: 0;
+                        padding: 0;
+                        @include text-sm-bold();
+                        @include label($color-accent-blue);
+                        &:hover {
+                            background-color: #cddafd9c;
+                        }
+                        a {
+                            color: $text-primary;
+                            text-decoration: none;
+                        }
+                    }
+
                 }
                 #status {
                     margin-left: .5rem !important;
                     @include skill-title($color-accent-green);
+                    
+                    &:hover {
+                        background-color: #D1E7DD9c;
+                    }
                 }   
                 #information {
                     margin: 0;
                     padding: 0;
-                    @include text-sm-muted();
+                    @include text-xsm();
 
                     & a {
                         @include label($color-accent-purple);
+                        
+                        &:hover {
+                            background-color: #DACAE39c;
+                        }
                     }
-                }
+                    span {
+                        margin: 0;
+                        padding: 0;
+                        @include text-sm-bold();
+                    }
+                    }
+                    
+                    
+                    }
+            }
                 #shortnote {
                     font-size: 7px;
                     font-weight: 400;
@@ -267,21 +340,19 @@ $border-sm: 1px solid $color-secondary-lighter;
                 padding-bottom: 0rem !important;
             }
         }
-    }
-}
 
 #divider-horizontal {
         height: .25rem;
         background-color: $color-secondary-light;
         border-radius: .5rem;
-        margin: .75rem 0rem .75rem 0rem;
-        margin-left: 1rem;
+        margin: 1rem 0rem 1rem 0rem;
+        margin-left: 2rem;
     }
 
 #footer {
     @include broder-bottom();
     width: 100% !important;
-    #section {       
+    #section {
         #topic-contents{
             padding-bottom: 0 !important;
             #skill-content {
@@ -292,10 +363,18 @@ $border-sm: 1px solid $color-secondary-lighter;
                     flex-wrap: wrap;
 
                     #skill-title {
-                        @include skill-title($color-accent-green);
+                        @include skill-title($color-accent-blue);
+    
+                        &:hover {
+                            background-color: #cddafd9c;
+                        }
                     }
                     #skill {
                         @include skill($color-accent-purple);
+    
+                        &:hover {
+                            background-color: #DACAE39c;
+                        }
                     }
                 }
 
@@ -317,36 +396,32 @@ $border-sm: 1px solid $color-secondary-lighter;
                     padding-bottom: .25rem !important;
                     flex-wrap: wrap;
                     #skill {
-                        @include skill($color-accent-pink);
+                        border: $border-sm;
+                        @include skill($color-secondary);
+
+                        &:hover {
+                            background-color: $color-base;
+                        }
                     }                    
                 }
             }
-            
-            
-            
+                        
         }
         #topic {
             #skill-language {
-                margin-top: 1.75rem;
-                #languages {
-                width: 50%;
-                display: flex;
-                flex-wrap: wrap;
-                padding: 0 !important;
-                margin-left: auto !important;
+                margin-top: .75rem;
                 #language {
-                    margin-left: auto !important;
-                    margin-top: .25rem;
-                    margin-bottom: 0;
-                    padding: 0;
-                    white-space: nowrap;
-                    @include text-sm-muted();
-                    @include label($color-accent-pink);
+                    margin-top: .25rem !important;
+                    max-width: 100% !important;
+                    @include text-xsm();
+                    @include label($color-accent-green);
                     cursor: pointer;
+                    
+                        &:hover {
+                            background-color: #D1E7DD9c;
+                        }
                 }
             }
-            }
-            
         }
     }
 }
@@ -355,11 +430,26 @@ $border-sm: 1px solid $color-secondary-lighter;
     #paper{
         min-width: 70vh;
     }
-}
-@media (max-width: 500px) {
-    #paper{
-        min-width: 90vh;
+    #canvas {
+        #button {
+            position: absolute;
+            bottom: 88%;
+            right: 10%;
+            transform: translate(0, -50%);
+            }
     }
+}
+@media (max-width: 550px) {
+    #paper{
+        min-height: 80vh;
+        min-width: vh;
+    }
+    #canvas {
+        #button {
+            display: none;
+            }
+    }
+
 }
 
 

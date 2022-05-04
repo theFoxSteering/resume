@@ -7,11 +7,15 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Resume</title>
 
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="/static/css/style.css">
         <!-- Import Bootstrap -->
         <link rel=stylesheet href=https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css
             integrity=sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I crossorigin=anonymous>
         <link rel=stylesheet href=https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css>
+
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.3/jspdf.min.js"></script>
+        <script src="https://html2canvas.hertzen.com/dist/html2canvas.js"></script>
 
 
     </head>
@@ -20,15 +24,22 @@
         <!-- The cancvas determine the space for paper -->
         <div id="canvas" class="d-flex justify-content-center align-items-center">
 
+            <div id="button">
+                <button class="btn btn-sm btn-secondary p-0 px-2" onclick="getPDF()"><i
+                        class="bi bi-box-arrow-down"></i>
+                </button>
+            </div>
+
             <!-- Actuall Resume paper space -->
             <div id="paper" class="col-4">
+
 
                 <!-- Header part of the resume -->
                 <div id="header" class="m-0 p-0 pr-5 d-flex">
 
                     <!-- Logo -->
                     <div id="logo" class="mr-auto d-flex justify-content-center align-items-center">
-                        <img src="images/logo.png" alt="logo">
+                        <img src="/static/images/logo.png" alt="logo">
                     </div>
 
                     <!-- Vertical line -->
@@ -52,39 +63,48 @@
                                         <td id="aboutme-qus">Date of Birth</td>
                                         <td id="aboutme-ans">19th November 1994</td>
                                     </tr>
+                                    <tr>
+                                        <td id="aboutme-qus">Address</td>
+                                        <td id="aboutme-ans" class="">Thiruvaiyaru.
+                                            Thanjavur,
+                                            Tamilnadu</td>
+                                    </tr>
                                 </table>
 
                             </div>
-                            <div id="contact-details" class="d-flex">
-                                <div id="contacts">
-                                    <ul class="m-0 p-0 ml-3">
-                                        <li><a href="#">vigramvasi@gmail.com</a></li>
-                                        <li>+91 7200986767</li>
-                                    </ul>
+                            <div id="contact-details">
+                                <div id="contact" class="d-flex">
+                                    <div id="contacts">
+                                        <ul class="m-0 p-0 ml-3">
+                                            <li><a href="#">vigramvasi@gmail.com</a></li>
+                                            <li>+91 7200986767</li>
+                                        </ul>
+                                    </div>
+                                    <div id="contacts-icon">
+                                        <ul class="m-0 p-0 ml-3">
+                                            <li><i class="bi bi-envelope-fill"></i></li>
+                                            <li><i class="bi bi-telephone-fill"></i></li>
+                                        </ul>
+                                    </div>
                                 </div>
-                                <div id="contacts-icon">
-                                    <ul class="m-0 p-0 ml-3">
-                                        <li><i class="bi bi-envelope-fill"></i></li>
-                                        <li><i class="bi bi-telephone-fill"></i></li>
-                                    </ul>
+                                <!-- Social Media -->
+                                <div id="social-icons">
+                                    <a id="icons" href="https://github.com/theFoxSteering" target="_blank"><i
+                                            class="git bi bi-github"></i></a>
+                                    <a id="icons" href="https://www.linkedin.com/in/vigramsivakumar/" target="_blank"><i
+                                            class="linkedin bi bi-linkedin"></i></a>
+
                                 </div>
                             </div>
-                            <table class="m-0 p-0 ml-3">
-                                <tr>
-                                    <td id="aboutme-qus">Address</td>
-                                    <td id="aboutme-ans-address" class="">84 Sriram Nagar, Thiruvaiyaru.
-                                        Thanjavur,
-                                        Tamilnadu -
-                                        613204</td>
-                                </tr>
-                            </table>
+
                         </div>
 
                         <div id="aboutme" class="m-0 p-0 ml-3 mt-2">
                             <ul class="m-0 p-0">
                                 <li>Hello, about me</li>
-                                <li>I am 27- year- old Architect, someone who wishes to see the world in a new
-                                    dimension.</li>
+                                <li>Passinate & curiosity-driven programming enthusiast. Gained wide range of skills
+                                    like HTML5, css, Python, etc. Seeking to further improve skills
+                                    as a full stack developer</li>
                             </ul>
                         </div>
 
@@ -100,7 +120,7 @@
                         <div id="section" class="d-flex border-0">
                             <!-- Title -->
                             <div id="topic" class="m-0 p-0 pr-3">
-                                <p class="overflow-auto">Experience</p>
+                                <p class="overflow-hidden">Experience</p>
                             </div>
                             <!-- Vertical line -->
                             <div id="divider-verticle-sm" class="m-0 p-0"></div>
@@ -109,7 +129,7 @@
                                 <div id="topic-content">
                                     <div class="d-flex">
                                         <p id="title">Product Support Representative</p>
-                                        <p id="status">Current</p>
+                                        <p class="my-auto" id="status">Current</p>
                                     </div>
                                     <p id="information">AUTODESK, Bangalore: Since June 2020</p>
                                 </div>
@@ -132,7 +152,7 @@
                         <div id="section" class="d-flex border-0">
                             <!-- Title -->
                             <div id="topic" class="m-0 p-0 pr-3">
-                                <p class="overflow-auto">Education</p>
+                                <p class="overflow-hidden">Education</p>
                             </div>
                             <!-- Vertical line -->
                             <div id="divider-verticle-sm" class="m-0 p-0"></div>
@@ -152,7 +172,7 @@
                         <div id="section" class="d-flex border-0">
                             <!-- Title -->
                             <div id="topic" class="m-0 p-0 pr-3">
-                                <p class="overflow-auto">Certifications</p>
+                                <p class="overflow-hidden">Certifications</p>
                             </div>
                             <!-- Vertical line -->
                             <div id="divider-verticle-sm" class="m-0 p-0"></div>
@@ -167,25 +187,51 @@
                                     <p id="title">IBM Full Stack Software Developer Professional Certificate</p>
                                     <p id="information"><a
                                             href="https://www.coursera.org/professional-certificates/ibm-full-stack-cloud-developer"
-                                            alt="Course Link">Coursera Course</a> - Status(Ongoing)
+                                            alt="Course Link" target="_blank">Coursera Course</a> - Status(Ongoing)
                                     </p>
                                 </div>
                                 <div id="topic-content">
                                     <p id="title">IBM Data Science Professional Certificate</p>
                                     <p id="information"><a
                                             href="https://www.coursera.org/professional-certificates/ibm-data-science"
-                                            alt="Course Link">Coursera Course</a> - Status(Ongoing)
+                                            alt="Course Link" target="_blank">Coursera Course</a> - Status(Ongoing)
                                     </p>
                                 </div>
                             </div>
 
                         </div>
 
+                        <!-- Projects -->
+                        <div id="section" class="d-flex border-0">
+                            <!-- Title -->
+                            <div id="topic" class="m-0 p-0 pr-3">
+                                <p class="overflow-hidden">Projects</p>
+
+                            </div>
+                            <!-- Vertical line -->
+                            <div id="divider-verticle-sm" class="m-0 p-0"></div>
+                            <div id="topic-contents" class="pl-3">
+                                <div id="topic-content">
+                                    <p id="title-label"><span><a href="ink-brew.herokuapp.com">Ink Brew App <i
+                                                    class="bi bi-arrow-up-right-square"></i></a></span> - All in
+                                        one
+                                        workspace for
+                                        bookmarks, notes,
+                                        tasks &
+                                        database. It's a tool to organize the thoughts & informations.</p>
+                                    <p id="information">
+                                    </p>
+                                    <p id="title">Tools: <span>Python, HTML5, css, Flask, BeautifulSoup, SqlAlchemy,
+                                            API, Bootstrap, Git, etc.</span></p>
+                                </div>
+                            </div>
+                        </div>
+
                         <!-- Hobbies -->
                         <div id="section" class="d-flex border-0">
                             <!-- Title -->
                             <div id="topic" class="m-0 p-0 pr-3">
-                                <p class="overflow-auto m-0 p-0">Hobbies</p>
+                                <p class="overflow-hidden">Hobbies</p>
 
                             </div>
                             <!-- Vertical line -->
@@ -198,8 +244,8 @@
                                         to do anything.</p>
                                 </div>
                             </div>
-
                         </div>
+
 
                         <!-- Divider -->
                         <div id="divider-horizontal"></div>
@@ -215,12 +261,9 @@
                                     <p id="shortnote" class="m-0 p-0 ml-auto">Things I can't unlearn.</p>
                                     <!-- Language -->
                                     <div id="skill-language">
-                                        <p class="overflow-auto m-0 p-0 pt-1">Language</p>
-                                        <div id="languages" class="m-0 p-0">
-                                            <p id="language">Tamil</p>
-                                            <p id="language">English</p>
-                                            <p id="language">Kannada</p>
-                                        </div>
+                                        <p id="languages" class="m-0 p-0 pt-1">Language</p>
+                                        <p><span id="language">Tamil</span></p>
+                                        <p><span id="language">English</span></p>
                                     </div>
 
                                 </div>
@@ -241,19 +284,19 @@
                                             <p id="skill">Selenium</p>
                                             <p id="skill">CSS/SCSS</p>
                                             <p id="skill">Git & GitHub</p>
-                                            <p id="skill">CSS/SCSS</p>
                                             <p id="skill">Flask</p>
                                             <p id="skill">Bootstrap</p>
-                                            <p id="skill">Bootstrap</p>
+                                            <p id="skill">Web scraping</p>
+                                            <p id="skill">Pandas</p>
                                         </div>
                                     </div>
                                     <!-- Architecture -->
-                                    <div id="skill-content">
+                                    <!-- <div id="skill-content">
                                         <div id="skills-02" class="m-0 p-0 d-flex align-items-center">
                                             <p id="title" class="mr-2">Architecture</p>
                                             <p id="skill-title">2D</p>
                                             <p id="skill-title">3D</p>
-                                            <p id="skill-title">Extras</p>
+                                            <p id="skill-title">Design</p>
                                         </div>
 
                                         <div id="skills-02" class="m-0 p-0 d-flex pulse-sm">
@@ -266,11 +309,11 @@
                                             <p id="skill">Lumion</p>
                                             <p id="skill">SketchUp</p>
                                         </div>
-                                    </div>
+                                    </div> -->
                                     <!-- Soft Skills -->
                                     <div id="skill-content">
                                         <div id="skills-03" class="m-0 p-0 d-flex align-items-start">
-                                            <p id="title" class="mr-2">Goot at</p>
+                                            <p id="title" class="mr-2">Good at</p>
                                             <p id="skill">Teamwork</p>
                                             <p id="skill">Flexibility</p>
                                             <p id="skill">Initiative</p>
@@ -289,7 +332,6 @@
 
                 </div>
 
-
             </div>
         </div>
 
@@ -300,6 +342,42 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
             integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
             crossorigin="anonymous"></script>
+
+        <script>
+            function getPDF() {
+
+                var HTML_Width = $("#paper").width();
+                var HTML_Height = $("#paper").height();
+                var top_left_margin = 0;
+                var PDF_Width = HTML_Width + (top_left_margin * 0);
+                var PDF_Height = (PDF_Width * 1.3) + (top_left_margin * 0);
+                var canvas_image_width = HTML_Width;
+                var canvas_image_height = HTML_Height;
+
+                var totalPDFPages = Math.ceil(HTML_Height / PDF_Height) - 1;
+
+
+                html2canvas($("#paper")[0], { allowTaint: true }).then(function (canvas) {
+                    canvas.getContext('2d');
+
+                    console.log(canvas.height + "  " + canvas.width);
+
+
+                    var imgData = canvas.toDataURL("image/jpeg", 1.0);
+                    var pdf = new jsPDF('p', 'pt', [PDF_Width, PDF_Height]);
+                    pdf.addImage(imgData, 'JPG', top_left_margin, top_left_margin, canvas_image_width, canvas_image_height);
+
+
+                    for (var i = 1; i <= totalPDFPages; i++) {
+                        pdf.addPage(PDF_Width, PDF_Height);
+                        pdf.addImage(imgData, 'JPG', top_left_margin, -(PDF_Height * i) + (top_left_margin * 0), canvas_image_width, canvas_image_height);
+                    }
+
+                    pdf.save("HTML-Document.pdf");
+                });
+            };
+        </script>
+
     </body>
 
 
