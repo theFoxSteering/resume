@@ -48,10 +48,11 @@
 #canvas #paper #button-back {
   z-index: 999;
   position: absolute;
-  top: 5%;
-  left: -8%;
+  top: 4%;
+  left: -15%;
   -webkit-transform: translate(0, -50%);
           transform: translate(0, -50%);
+  margin-left: auto;
 }
 
 #canvas #paper #button-back a {
@@ -64,7 +65,19 @@
   font-size: 1.25rem;
 }
 
-#canvas #paper #button-back a:hover {
+#canvas #paper #button-back #hidden-text {
+  visibility: hidden;
+}
+
+#canvas #paper #button-back #hidden-text:hover {
+  color: #6C757Dec !important;
+}
+
+#canvas #paper #button-back:hover #hidden-text {
+  visibility: visible;
+}
+
+#canvas #paper #button-back:hover a:first-child {
   color: #F5F5F5;
 }
 
@@ -163,6 +176,7 @@
 }
 
 #header #biography #contact-details #contacts-icon ul li {
+  font-size: .75rem !important;
   list-style-type: none;
   font-size: xx-small;
   font-weight: 400;
@@ -170,16 +184,18 @@
 }
 
 #header #biography #contact-details #contacts-icon ul li:last-child {
+  cursor: pointer;
   color: #e84757;
 }
 
 #header #biography #contact-details #contacts-icon ul li:first-child {
+  cursor: pointer;
   color: #fec834;
 }
 
 #header #biography #contact-details #social-icons {
   text-align: right;
-  font-size: small;
+  font-size: .75rem;
 }
 
 #header #biography #contact-details #social-icons #icons {

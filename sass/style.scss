@@ -135,9 +135,10 @@ $border-sm: 1px solid $color-secondary-lighter;
     #button-back {
         z-index: 999;
         position: absolute;
-        top: 5%;
-        left: -8%;
+        top: 4%;
+        left: -15%;
         transform: translate(0, -50%);
+        margin-left: auto;
         a{
             color: #6C757Dec;
             text-decoration: none;
@@ -145,12 +146,21 @@ $border-sm: 1px solid $color-secondary-lighter;
             i {
                 font-size: 1.25rem;
             }
-            &:hover {
-                color: $color-secondary;
-            }
         }
-        
+        #hidden-text {
+            visibility: hidden;
+        }
+        #hidden-text:hover {
+            color: #6C757Dec !important;
+        }
     }
+    #button-back:hover #hidden-text {
+        visibility: visible;
+    }
+    #button-back:hover a:first-child {
+                color: $color-secondary;
+    }
+    
 
   }
   #paper:hover {
@@ -223,11 +233,15 @@ $border-sm: 1px solid $color-secondary-lighter;
 
             #contacts-icon {
                 ul li{
+                    
+                    font-size: .75rem !important;
                     @include text-xsm();
                 &:last-child {
+                    cursor: pointer;
                     color: $color-accent-red;
                 }
                 &:first-child {
+                    cursor: pointer;
                     color: $color-accent-yellow;
                 }
                 }
@@ -236,7 +250,7 @@ $border-sm: 1px solid $color-secondary-lighter;
 
             #social-icons {
                 text-align: right;
-                font-size: small;
+                font-size: .75rem;
 
                 #icons{
                     margin-left: .25rem;
@@ -249,7 +263,10 @@ $border-sm: 1px solid $color-secondary-lighter;
                 .git {
                     color: #171515 ;
                 }
+                
             }
+            
+            
         }        
 
         #aboutme {
