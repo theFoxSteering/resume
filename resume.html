@@ -24,15 +24,21 @@
         <!-- The cancvas determine the space for paper -->
         <div id="canvas" class="d-flex justify-content-center align-items-center">
 
-            <div id="button">
-                <button class="btn btn-sm btn-secondary p-0 px-2" onclick="getPDF()"><i
-                        class="bi bi-box-arrow-down"></i>
-                </button>
-            </div>
 
             <!-- Actuall Resume paper space -->
             <div id="paper" class="col-4">
 
+                <div id="button-back" class="m-0 p-0 d-flex justify-content-center align-items-center">
+                    <a type="button" role="button" href="javascript:history.back()"><i
+                            class="bi bi-caret-left-fill"></i></a>
+                </div>
+
+                <div id="button-download"
+                    class="m-0 p-0 px-1 btn btn-sm btn-warning d-flex justify-content-center align-items-center">
+                    <a type="button" role="button" ref="/static/images/vigram_resume.pdf" target="_blank" download"><i
+                            class="bi bi-box-arrow-down"></i></a>
+                    <a type="button" ref="/static/images/vigram_resume.pdf" target="_blank" download>Download</a>
+                </div>
 
                 <!-- Header part of the resume -->
                 <div id="header" class="m-0 p-0 pr-5 d-flex">

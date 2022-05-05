@@ -6,27 +6,66 @@
 #canvas {
   height: 100vh;
   width: 100vw;
-  background-color: #FAFAFA;
-}
-
-#canvas #button {
-  z-index: 999;
-  position: absolute;
-  bottom: 5%;
-  right: 5%;
-  -webkit-transform: translate(0, -50%);
-          transform: translate(0, -50%);
+  background-color: #212529;
 }
 
 #canvas #paper {
   height: 90vh;
-  background-color: #FFF;
+  background-color: #FAFAFA;
   -webkit-box-shadow: 3px 6px 8px -3px rgba(0, 0, 0, 0.3);
           box-shadow: 3px 6px 8px -3px rgba(0, 0, 0, 0.3);
   border-bottom-left-radius: .5rem !important;
   border-bottom-right-radius: .5rem !important;
   border-top-left-radius: .5rem;
   border-top-right-radius: .5rem;
+  position: relative;
+}
+
+#canvas #paper #button-download {
+  z-index: 999;
+  position: absolute;
+  top: 5%;
+  right: -20%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+}
+
+#canvas #paper #button-download a {
+  color: #212529;
+  text-decoration: none;
+  font-size: x-small;
+  font-weight: 600;
+}
+
+#canvas #paper #button-download a i {
+  font-size: small;
+}
+
+#canvas #paper #button-download a:last-child {
+  padding-left: .25rem;
+}
+
+#canvas #paper #button-back {
+  z-index: 999;
+  position: absolute;
+  top: 5%;
+  left: -8%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+}
+
+#canvas #paper #button-back a {
+  color: #6C757Dec;
+  text-decoration: none;
+  font-size: .75rem;
+}
+
+#canvas #paper #button-back a i {
+  font-size: 1.25rem;
+}
+
+#canvas #paper #button-back a:hover {
+  color: #F5F5F5;
 }
 
 #canvas #paper:hover {
