@@ -97,10 +97,13 @@ $border-sm: 1px solid $color-secondary-lighter;
     border-right: $border-sm;
 }
 
+body {
+  background-color: #212529 !important;
+}
+
 #canvas {
   height: 100vh;
   width: 100vw;
-  background-color: #212529;
   
   #paper {
     height: 90vh;
@@ -483,7 +486,7 @@ $border-sm: 1px solid $color-secondary-lighter;
 
 @media (max-width: 1920px) {
     #paper{
-        min-width: 70vh;
+        min-width: 70vw;
     }
     #canvas {
         #button {
@@ -494,15 +497,44 @@ $border-sm: 1px solid $color-secondary-lighter;
             }
     }
 }
-@media (max-width: 550px) {
+@media (max-width: 500px) {
+    #canvas {
+        margin: auto !important;
+    }
     #paper{
         min-height: 80vh;
-        min-width: vh;
+        min-width: 90vw;
+        margin: 0 !important;
+
+        #button-back #icon-back, #button-download #icon-download{
+        display: none !important;
+        }
+        #button-back, #button-download {
+            display: none !important;
+        }
     }
-    #canvas {
-        #button {
-            display: none;
-            }
+    @mixin text-sm-bold {
+        list-style-type: none;
+        font-size: 5px !important;
+        font-weight: 700;
+        color: $text-primary;
+    }
+    @mixin text-md {
+        list-style-type: none;
+        font-size: 10px !important;
+        font-weight: 700;
+        color: $text-primary;
+    }
+    @mixin text-xsm {
+        list-style-type: none;
+        font-size: 10px !important;
+        font-weight: 400;
+        color: $text-secondary-dark;
+    }
+    @mixin text-xsm-light {
+        list-style-type: none;
+        font-size: xx-small;
+        color: $text-secondary-dark;
     }
 
 }

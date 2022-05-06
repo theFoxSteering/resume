@@ -3,10 +3,13 @@
   padding: 0;
 }
 
+body {
+  background-color: #212529 !important;
+}
+
 #canvas {
   height: 100vh;
   width: 100vw;
-  background-color: #212529;
 }
 
 #canvas #paper {
@@ -570,7 +573,7 @@
 
 @media (max-width: 1920px) {
   #paper {
-    min-width: 70vh;
+    min-width: 70vw;
   }
   #canvas #button {
     position: absolute;
@@ -581,13 +584,20 @@
   }
 }
 
-@media (max-width: 550px) {
+@media (max-width: 500px) {
+  #canvas {
+    margin: auto !important;
+  }
   #paper {
     min-height: 80vh;
-    min-width: vh;
+    min-width: 90vw;
+    margin: 0 !important;
   }
-  #canvas #button {
-    display: none;
+  #paper #button-back #icon-back, #paper #button-download #icon-download {
+    display: none !important;
+  }
+  #paper #button-back, #paper #button-download {
+    display: none !important;
   }
 }
 
