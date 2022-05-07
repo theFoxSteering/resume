@@ -27,32 +27,41 @@ body {
 #canvas #paper #button-download {
   z-index: 999;
   position: absolute;
-  top: 5%;
-  right: -20%;
+  top: 4%;
+  left: 102%;
   -webkit-transform: translate(0, -50%);
           transform: translate(0, -50%);
 }
 
 #canvas #paper #button-download a {
-  color: #212529;
+  color: #6C757Dec;
   text-decoration: none;
-  font-size: x-small;
-  font-weight: 600;
+  font-size: .75rem;
+  white-space: nowrap;
 }
 
 #canvas #paper #button-download a i {
-  font-size: small;
+  font-size: 1.25rem;
 }
 
 #canvas #paper #button-download a:last-child {
   padding-left: .25rem;
 }
 
+#canvas #paper #button-download #hidden-text {
+  display: none;
+  color: #6C757Dec !important;
+}
+
+#canvas #paper #button-download #hidden-text:hover {
+  color: #6C757D !important;
+}
+
 #canvas #paper #button-back {
   z-index: 999;
   position: absolute;
-  top: 4%;
-  left: -15%;
+  top: 3%;
+  right: 103%;
   -webkit-transform: translate(0, -50%);
           transform: translate(0, -50%);
   margin-left: auto;
@@ -62,6 +71,7 @@ body {
   color: #6C757Dec;
   text-decoration: none;
   font-size: .75rem;
+  white-space: nowrap;
 }
 
 #canvas #paper #button-back a i {
@@ -69,15 +79,23 @@ body {
 }
 
 #canvas #paper #button-back #hidden-text {
-  visibility: hidden;
+  display: none;
 }
 
 #canvas #paper #button-back #hidden-text:hover {
   color: #6C757Dec !important;
 }
 
+#canvas #paper #button-download:hover #hidden-text {
+  display: block;
+}
+
+#canvas #paper #button-download:hover a:first-child {
+  color: #fec834;
+}
+
 #canvas #paper #button-back:hover #hidden-text {
-  visibility: visible;
+  display: block;
 }
 
 #canvas #paper #button-back:hover a:first-child {
@@ -573,7 +591,7 @@ body {
 
 @media (max-width: 1920px) {
   #paper {
-    min-width: 70vw;
+    min-width: 70vh;
   }
   #canvas #button {
     position: absolute;

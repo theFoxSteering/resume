@@ -116,21 +116,28 @@ body {
     #button-download {
         z-index: 999;
         position: absolute;
-        top: 5%;
-        right: -20%;
+        top: 4%;
+        left: 102%;
         transform: translate(0, -50%);
         a{
-            color: $text-primary;
+            color: #6C757Dec;
             text-decoration: none;
-            font-size: x-small;
-            font-weight: 600;
+            font-size: .75rem;
+            white-space: nowrap;
             i {
-                font-size: small;
+                font-size: 1.25rem;
             }
 
             &:last-child {
             padding-left: .25rem;
         }
+        }
+        #hidden-text {
+            display: none;
+            color: #6C757Dec !important;
+        }
+        #hidden-text:hover {
+            color: $text-secondary-light !important;
         }
         
     }
@@ -138,27 +145,36 @@ body {
     #button-back {
         z-index: 999;
         position: absolute;
-        top: 4%;
-        left: -15%;
+        top: 3%;
+        right: 103%;
         transform: translate(0, -50%);
         margin-left: auto;
         a{
             color: #6C757Dec;
             text-decoration: none;
             font-size: .75rem;
+            white-space: nowrap;
             i {
                 font-size: 1.25rem;
             }
         }
         #hidden-text {
-            visibility: hidden;
+            display: none;
+
         }
         #hidden-text:hover {
             color: #6C757Dec !important;
         }
     }
+    #button-download:hover #hidden-text {
+        display: block;
+    }
+    #button-download:hover a:first-child {
+                color: $color-accent-yellow;
+    }
+
     #button-back:hover #hidden-text {
-        visibility: visible;
+         display: block;
     }
     #button-back:hover a:first-child {
                 color: $color-secondary;
@@ -486,7 +502,7 @@ body {
 
 @media (max-width: 1920px) {
     #paper{
-        min-width: 70vw;
+        min-width: 70vh;
     }
     #canvas {
         #button {
